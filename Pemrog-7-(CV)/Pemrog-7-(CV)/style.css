@@ -1,0 +1,616 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'Poppins', sans-serif;
+}
+body {
+   background: #081b29;
+   color: #ededed;
+}
+/*--------------------------------------------------------------
+# NAVBAR
+--------------------------------------------------------------*/
+.navbar-toggler {
+   color: #00abf0;
+}
+
+.header {
+   border-radius: 15px;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: auto;
+   padding: 20px 5%;
+   background: transparent;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   z-index: 100;
+}
+
+.logo {
+   position: relative;
+   font-size: 25px;
+   color: #ededed;
+   text-decoration: none;
+   font-weight: 600;
+}
+
+.navbar-toggler {
+   background-color: #00abf0;
+}
+.nav-item a {
+   z-index: 100;
+   font-size: 18px;
+   color: #ededed;
+   text-decoration: none;
+   font-weight: 400;
+   margin-left: 40px;
+   transition: 0.3s;
+   position: relative;
+}
+
+.nav-link {
+   position: relative;
+}
+
+.nav-item a:hover,
+.nav-item a.active {
+   color: #00abf0;
+   border-bottom: 3px solid #00abf0;
+}
+@media (max-width: 575px) {
+   .nav-item {
+      background: #081b29;
+      border-radius: 15px;
+      margin-top: 5px;
+      overflow: hidden;
+   }
+   .nav-item a {
+      color: #ededed;
+      text-align: center;
+      margin-left: 0;
+   }
+   .nav-item a:hover,
+   .nav-item a.active {
+      color: #00abf0;
+      border-bottom: 3px 50px solid #00abf0;
+   }
+}
+
+/*--------------------------------------------------------------
+# hero section
+--------------------------------------------------------------*/
+.home {
+   display: flex;
+   height: 100vh;
+   align-items: center;
+   padding: 0 5%;
+}
+
+.home-content {
+   max-width: 600px;
+}
+
+.home-content .h1 {
+   position: relative;
+   font-weight: 700;
+   font-size: 56px;
+   line-height: 1.2;
+}
+
+.home-content h3 {
+   position: relative;
+   font-size: 32px;
+   font-weight: 700;
+   color: #00abf0;
+}
+
+.home-content p {
+   position: relative;
+   font-size: 16px;
+   margin: 20px 0 40px;
+}
+
+.home-content .btn-box {
+   position: relative;
+   display: flex;
+   justify-content: space-between;
+   width: 345px;
+   height: 50px;
+}
+
+.btn-box a {
+   position: relative;
+   display: inline-flex;
+   justify-content: center;
+   align-items: center;
+   width: 150px;
+   height: 100%;
+   background: #00abf0;
+   border: 2px solid #00abf0;
+   border-radius: 8px;
+   font-size: 19px;
+   color: #081b29;
+   text-decoration: none;
+   font-weight: 600;
+   letter-spacing: 1px;
+   z-index: 1;
+   overflow: hidden;
+   transition: 0.5s;
+}
+
+.btn-box a:hover {
+   color: #00abf0;
+}
+
+.btn-box a:nth-child(2) {
+   background: transparent;
+   color: #00abf0;
+}
+
+.btn-box a:nth-child(2):hover {
+   color: #081b29;
+}
+
+.btn-box a:nth-child(2)::before {
+   background: #00abf0;
+}
+
+.btn-box a::before {
+   content: '';
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 0;
+   height: 100%;
+   background: #081b29;
+   z-index: -1;
+   transition: 0.5s;
+}
+
+.btn-box a:hover::before {
+   width: 100%;
+}
+
+/*--------------------------------------------------------------
+# SOSMED
+--------------------------------------------------------------*/
+.home-sci {
+   position: absolute;
+   bottom: 40px;
+   width: 170px;
+   display: flex;
+   justify-content: space-between;
+}
+
+.home-sci a {
+   position: relative;
+   display: inline-flex;
+   justify-content: center;
+   align-items: center;
+   width: 40px;
+   height: 40px;
+   background: transparent;
+   border: 2px solid #00abf0;
+   border-radius: 50px;
+   font-size: 20px;
+   color: #00abf0;
+   text-decoration: none;
+   z-index: 1;
+   overflow: hidden;
+   transition: 0.5s;
+}
+
+.home-sci a:hover {
+   color: #081b29;
+}
+
+.home-sci a::before {
+   content: '';
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 0;
+   height: 100%;
+   background: #00abf0;
+   z-index: -1;
+   transition: 0.5s;
+}
+
+.home-sci a:hover:before {
+   width: 100%;
+}
+
+.image {
+   position: relative;
+}
+
+.image:hover {
+   filter: drop-shadow(1px 1px 10px #00abf0);
+   transition: 1s;
+}
+
+.image img {
+   max-width: 700px;
+   margin-left: 20px;
+}
+
+@media (max-width: 575px) {
+   .home {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px; /* Ubah padding untuk tampilan mobile */
+   }
+
+   /* Maksimum lebar konten */
+   .home-content {
+      margin-top: 100px;
+      max-width: 575px;
+      align-content: center;
+      justify-content: center;
+      max-width: 100%; /* Gunakan lebar maksimum untuk tampilan mobile */
+      text-align: center; /* Tengahkan konten teks */
+   }
+
+   /* Gaya teks */
+   .home-content h1 {
+      font-size: 30px; /* Ukuran font yang lebih kecil untuk judul */
+      line-height: 1.2;
+   }
+
+   .home-content h3 {
+      font-size: 24px; /* Ukuran font yang lebih kecil untuk subjudul */
+   }
+
+   .home-content p {
+      font-size: 14px; /* Ukuran font yang lebih kecil untuk paragraf */
+      margin-bottom: 20px; /* Ubah margin bawah */
+   }
+
+   /* Penyesuaian tombol */
+   .btn-box {
+      display: flex;
+      justify-content: center; /* Tengahkan tombol */
+      width: 100%; /* Gunakan lebar penuh */
+      max-width: 300px; /* Batasi lebar tombol untuk tampilan mobile */
+      flex-wrap: wrap; /* Bungkus tombol jika overflow */
+   }
+
+   .btn-box a {
+      width: 140px; /* Lebar tombol yang lebih kecil untuk tampilan mobile */
+      margin: 5px; /* Tambahkan margin antar tombol */
+      font-size: 16px; /* Ukuran font yang lebih kecil untuk tombol */
+   }
+
+   /* Menghilangkan gambar untuk tampilan mobile */
+   .image {
+      display: none; /* Sembunyikan gambar pada tampilan mobile */
+   }
+}
+
+/*--------------------------------------------------------------
+# Sections General
+--------------------------------------------------------------*/
+section {
+   padding: 60px 0;
+}
+
+.section-bg {
+   background-color: #081b29;
+}
+
+.section-title {
+   text-align: center;
+   padding: 30px 0;
+   position: relative;
+}
+
+.section-title h2 {
+   font-size: 32px;
+   font-weight: 700;
+   text-transform: uppercase;
+   margin-bottom: 20px;
+   padding-bottom: 0;
+   color: #ededed;
+   position: relative;
+   z-index: 2;
+}
+
+.section-title span {
+   position: absolute;
+   top: 30px;
+   color: #535151;
+   left: 0;
+   right: 0;
+   z-index: 1;
+   font-weight: 700;
+   font-size: 52px;
+   text-transform: uppercase;
+   line-height: 0;
+}
+.section-title p {
+   margin-bottom: 0;
+   position: relative;
+   text-transform: uppercase;
+   z-index: 2;
+}
+
+@media (max-width: 575px) {
+   .section-title h2 {
+      font-size: 28px;
+      margin-bottom: 15px;
+   }
+
+   .section-title span {
+      font-size: 38px;
+   }
+}
+
+/*--------------------------------------------------------------
+# ABOUT
+--------------------------------------------------------------*/
+.about .content h3 {
+   font-weight: 700;
+   font-size: 26px;
+   color: #ededed;
+   text-transform: uppercase;
+}
+
+.about .content ul {
+   list-style: none;
+   padding: 0;
+}
+
+.about .content ul li {
+   margin-bottom: 20px;
+   display: flex;
+   align-items: center;
+}
+
+.about .content ul strong {
+   margin-right: 10px;
+   color: #ededed;
+}
+.about .content ul span {
+   color: #ededed;
+}
+
+.about .content ul i {
+   font-size: 16px;
+   margin-right: 5px;
+   color: #00abf0;
+   line-height: 0;
+}
+
+.about .content p:last-child {
+   margin-bottom: 0;
+}
+
+.about .image {
+   background: url('assets/profil.jpeg') center center no-repeat;
+   background-size: cover;
+   min-height: 400px;
+}
+
+@media (max-width: 768px) {
+   .about .content ul {
+      margin-top: 20px;
+      list-style: none;
+      padding: 0;
+   }
+}
+/*--------------------------------------------------------------
+# SKILL CONTENT
+--------------------------------------------------------------*/
+
+.skills-content h2 {
+   font-size: 32px;
+   font-weight: 700;
+   text-transform: uppercase;
+   margin-bottom: 20px;
+   padding-bottom: 0;
+   color: #ededed;
+   position: relative;
+   z-index: 1;
+}
+
+.skills-content {
+   margin-top: 20px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column; /* Mengatur orientasi konten menjadi vertikal */
+}
+
+.skills-content .row {
+   background-color: #3b434a;
+   border-radius: 15px;
+   padding: 20px;
+   display: flex;
+   justify-content: center; /* Memusatkan kolom di tengah */
+   gap: 50px; /* Memberi jarak antara kolom */
+}
+.skills-content .row:hover {
+   filter: drop-shadow(1px 1px 10px #00abf0);
+   transition: 0.5s;
+}
+
+.skills-content .col {
+   text-align: center; /* Memusatkan konten di tengah dalam setiap kolom */
+}
+
+.skills-content img {
+   display: block;
+   max-width: 100%; /* Memastikan gambar tidak melebihi lebar konten */
+   height: auto; /* Menjaga aspek gambar */
+   margin-top: 10px; /* Memberi margin di atas gambar */
+}
+
+.skills-content h4 {
+   margin-top: 10px;
+   color: #ffffff; /* Warna teks putih */
+}
+
+@media (max-width: 575px) {
+   .skills-content h2 {
+      font-size: 25px;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: #ededed;
+   }
+
+   .skills-content .col {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+   }
+}
+
+/*--------------------------------------------------------------
+# My Portfolio
+--------------------------------------------------------------*/
+.portfolio-container {
+   margin-top: -20px;
+}
+
+.portfolio .portfolio-item .portfolio-img {
+   overflow: hidden;
+}
+
+.portfolio .portfolio-item .portfolio-img img {
+   transition: all 0.8s ease-in-out;
+}
+
+.portfolio .portfolio-item {
+   left: 15px;
+   bottom: 0;
+   right: 15px;
+   transition: all ease-in-out 0.3s;
+   background: transparent;
+   padding: 10px 15px;
+}
+
+.portfolio .portfolio-item:hover .portfolio-img img {
+   transform: scale(1.2);
+}
+
+.portfolio .portfolio-item:hover {
+   opacity: 1;
+}
+
+/*--------------------------------------------------------------
+# Contact Me
+--------------------------------------------------------------*/
+.contact .info-box {
+   color: #ededed;
+   text-align: center;
+   box-shadow: 0 0 10px #00abf0;
+   padding: 20px 0 30px 0;
+}
+
+.contact .info-box i.bx {
+   border: 1px solid #00abf0;
+   border-radius: 50%;
+   font-size: 24px;
+   color: #00abf0;
+   border-radius: 50%;
+   padding: 15px;
+   background: #081b29;
+}
+
+.contact .info-box h3 {
+   font-size: 20px;
+   color: #ededed;
+   font-weight: 700;
+   margin: 10px 0;
+}
+
+.contact .info-box p {
+   padding: 0;
+   line-height: 24px;
+   font-size: 14px;
+   margin-bottom: 0;
+}
+
+.contact .social-links {
+   margin-top: 15px;
+   display: flex;
+   justify-content: center;
+}
+
+.contact .social-links a {
+   font-size: 18px;
+   display: inline-block;
+   color: #ededed;
+   line-height: 1;
+   margin: 0 8px;
+   transition: 0.3s;
+   padding: 14px;
+   border-radius: 50px;
+   border: 1px solid #00abf0;
+}
+
+.contact .social-links a:hover {
+   color: #081b29;
+   border-color: #00abf0;
+   background: #00abf0;
+}
+
+.contact .email-form {
+   box-shadow: 0 0 10px #00abf0;
+   margin-top: 15px;
+   padding: 27px;
+}
+
+.contact .email-form input,
+.contact .email-form textarea {
+   border-radius: 0;
+   box-shadow: none;
+   font-size: 14px;
+}
+
+.contact .email-form input::focus,
+.contact .email-form textarea::focus {
+   background-color: #ffb727;
+}
+
+.contact .email-form input {
+   padding: 10px 15px;
+}
+
+.contact .email-form textarea {
+   padding: 12px 15px;
+}
+
+.contact .email-form button[type='submit'] {
+   background: #00abf0;
+   margin-top: 15px;
+   border: 0;
+   padding: 10px 24px;
+   color: #081b29;
+   transition: 0.4s;
+   border-radius: 5px;
+}
+
+.contact .email-form button[type='submit']:hover {
+   background: #081b29;
+   color: #00abf0;
+   border: 2px solid #00abf0;
+
+   border-radius: 5px;
+}
+
+@keyframes animate-loading {
+   0% {
+      transform: rotate(0deg);
+   }
+
+   100% {
+      transform: rotate(360deg);
+   }
+}
